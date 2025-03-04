@@ -14,6 +14,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CPPTOPDOWN_CppTopDownCharacter_generated_h
 
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_CppTopDownCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRIP);
+
+
 #define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_CppTopDownCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACppTopDownCharacter(); \
@@ -39,6 +43,7 @@ public: \
 #define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_CppTopDownCharacter_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_CppTopDownCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_CppTopDownCharacter_h_12_INCLASS_NO_PURE_DECLS \
 	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_CppTopDownCharacter_h_12_ENHANCED_CONSTRUCTORS \
 private: \

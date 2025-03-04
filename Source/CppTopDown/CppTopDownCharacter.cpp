@@ -49,3 +49,14 @@ void ACppTopDownCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 }
+
+
+
+// Define "RIP" function
+void ACppTopDownCharacter::RIP()
+{
+	GetMesh()->SetSimulatePhysics(true);
+	GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	APlayerController* PC = Cast<APlayerController>(GetController());
+	PC->DisableInput(PC);
+}

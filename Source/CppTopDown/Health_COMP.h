@@ -6,8 +6,9 @@
 #include "Components/ActorComponent.h"
 #include "Health_COMP.generated.h"
 
-
+//Forward declare dispatchers
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnHealthChanged);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class CPPTOPDOWN_API UHealth_COMP : public UActorComponent
@@ -18,9 +19,15 @@ public:
 	// Sets default values for this component's properties
 	UHealth_COMP();
 
-
+	//Declare dispatchers
 	UPROPERTY(BlueprintAssignable)
 	FOnHealthChanged OnHealthChanged;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnDeath OnDeath;
+
+
+
 
 	// Declare "Health" variables
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Health")
@@ -42,5 +49,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void AffectHealth(float HealthChangeAmount);
 
+
+	// Declare "RIP" function
+	UFUNCTION(BlueprintCallable)
+	void RIP();
 		
 };

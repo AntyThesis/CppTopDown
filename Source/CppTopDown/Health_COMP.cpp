@@ -43,4 +43,18 @@ void UHealth_COMP::AffectHealth(float HealthChangeAmount)
 	CurrentHealth += HealthChangeAmount;
 	FMath::Clamp(CurrentHealth, 0, MaxHealth);
 	OnHealthChanged.Broadcast();
+
+	if (CurrentHealth == 0)
+	{
+		RIP();
+	}
+}
+
+
+
+
+// Define "RIP" function
+void UHealth_COMP::RIP()
+{
+	OnDeath.Broadcast();
 }
