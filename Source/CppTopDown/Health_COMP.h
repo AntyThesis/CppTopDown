@@ -7,6 +7,8 @@
 #include "Health_COMP.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnHealthChanged);
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class CPPTOPDOWN_API UHealth_COMP : public UActorComponent
 {
@@ -17,12 +19,14 @@ public:
 	UHealth_COMP();
 
 
+	UPROPERTY(BlueprintAssignable)
+	FOnHealthChanged OnHealthChanged;
 
-	// Declare Health variables
-	UPROPERTY(BlueprintReadOnly,VisibleAnywhere)
+	// Declare "Health" variables
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Health")
 	float CurrentHealth = 0;
 
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Health")
 	float MaxHealth = 100.f;
 
 protected:
@@ -32,6 +36,11 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+
+	// Declare "AffectHealth" function
+	UFUNCTION(BlueprintCallable)
+	void AffectHealth(float HealthChangeAmount);
 
 		
 };

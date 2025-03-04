@@ -14,7 +14,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CPPTOPDOWN_Health_COMP_generated_h
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_10_DELEGATE \
+CPPTOPDOWN_API void FOnHealthChanged_DelegateWrapper(const FMulticastScriptDelegate& OnHealthChanged);
+
+
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execAffectHealth);
+
+
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHealth_COMP(); \
 	friend struct Z_Construct_UClass_UHealth_COMP_Statics; \
@@ -23,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UHealth_COMP)
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UHealth_COMP(UHealth_COMP&&); \
@@ -35,12 +43,13 @@ public: \
 	NO_API virtual ~UHealth_COMP();
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_10_PROLOG
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_13_GENERATED_BODY \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_12_PROLOG
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Health_COMP_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

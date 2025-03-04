@@ -35,3 +35,12 @@ void UHealth_COMP::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 	// ...
 }
 
+
+
+//Define "AffectHealth" function
+void UHealth_COMP::AffectHealth(float HealthChangeAmount)
+{
+	CurrentHealth += HealthChangeAmount;
+	FMath::Clamp(CurrentHealth, 0, MaxHealth);
+	OnHealthChanged.Broadcast();
+}
