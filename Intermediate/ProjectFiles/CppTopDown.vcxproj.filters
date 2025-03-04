@@ -69,5 +69,17 @@
     <ClCompile Include="..\..\Source\CppTopDown\Health_COMP.h">
       <Filter>Source\CppTopDown</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\CppTopDown\Inventory_COMP.cpp">
+      <Filter>Source\CppTopDown</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CppTopDown\Inventory_COMP.h">
+      <Filter>Source\CppTopDown</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CppTopDown\TestActor.cpp">
+      <Filter>Source\CppTopDown</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CppTopDown\TestActor.h">
+      <Filter>Source\CppTopDown</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

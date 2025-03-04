@@ -6,7 +6,15 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"D:/Unreal Projects/CppTopDown/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"D:/Unreal Projects/CppTopDown/Content/TopDown/Blueprints/BP_TopDownCharacter.uasset"
+				"D:/Unreal Projects/CppTopDown/Content/TopDown/Blueprints/BP_TopDownCharacter.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/TopDown/Blueprints/BP_TestActor.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/__ExternalActors__/TopDown/Maps/TopDownMap/6/QS/0OVOYVL1EPV8XI26KE23BC.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/__ExternalActors__/TopDown/Maps/TopDownMap/9/MX/HNNTBB9TSYQFJ3Z2JJV4CR.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/__ExternalActors__/TopDown/Maps/TopDownMap/D/0V/BNACYSA874P161ROPNO1GB.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/__ExternalActors__/TopDown/Maps/TopDownMap/C/TP/Z45R5FZCL3A932X6C6ZNI0.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/__ExternalActors__/TopDown/Maps/TopDownMap/C/YU/T2ZAYLLFZYA7E57TRTRZDB.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/__ExternalActors__/TopDown/Maps/TopDownMap/6/97/ZL9XAF4CMV1XJQRK3F2RFS.uasset",
+				"D:/Unreal Projects/CppTopDown/Content/TopDown/Blueprints/WBP_HealthBar.uasset"
 			]
 		}
 	]
