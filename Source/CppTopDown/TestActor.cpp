@@ -1,8 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+
 #include "TestActor.h"
 #include "Inventory_COMP.h"
+
 
 // Sets default values
 ATestActor::ATestActor()
@@ -17,6 +19,11 @@ void ATestActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
+
+	UStaticMeshComponent* Mesh = FindComponentByClass <UStaticMeshComponent>();
+	UPrimitiveComponent* CollisionBox = FindComponentByClass<UPrimitiveComponent>();
+
+
 }
 
 // Called every frame
@@ -26,3 +33,29 @@ void ATestActor::Tick(float DeltaTime)
 
 }
 
+
+
+// Define "PickedUp" function
+void ATestActor::PickedUp(ACppTopDownCharacter* CharacterPickingUp)
+{
+	if (CharacterPickingUp)
+	{
+		UInventory_COMP* Inventory = CharacterPickingUp->GetComponentByClass<UInventory_COMP>();
+
+
+
+		if (Inventory)
+		{
+			if (!Inventory->FullInventory())
+			
+			{
+				UStaticMeshComponent* Mesh = FindComponentByClass <UStaticMeshComponent>();
+				UPrimitiveComponent* CollisionBox = FindComponentByClass<UPrimitiveComponent>();
+
+				Mesh->SetVisibility(false);
+				Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+				CollisionBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			}
+		}
+	}
+}

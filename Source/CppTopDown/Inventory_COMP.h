@@ -4,9 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "TestActor.h"
 #include "Inventory_COMP.generated.h"
 
+
+class ATestActor;
 
 // Forward declare dispatchers
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnItemAdded);
@@ -23,6 +24,7 @@ public:
 	UInventory_COMP();
 
 
+	// Declare "Inventory" array
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	TArray<ATestActor*> Inventory;
 
@@ -35,6 +37,8 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnItemRemoved OnItemRemoved;
 
+
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -44,9 +48,16 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 		
+
+	// Declare "Add and Remove Item" functions
 	UFUNCTION(BlueprintCallable)
 	void AddItemToInventory(ATestActor* ItemToBeAdded);
 
 	UFUNCTION(BlueprintCallable)
 	void RemoveItemFromInventory(ATestActor* ItemToBeRemoved);
+
+
+	// Declare "FullInventory" function
+	UFUNCTION(BlueprintCallable)
+	bool FullInventory() const;
 };

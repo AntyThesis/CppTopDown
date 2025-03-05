@@ -4,7 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "CppTopDownCharacter.h"
 #include "TestActor.generated.h"
+
+
+// Forward declare UInventory_COMP
+class UInventory_COMP;
+
 
 UCLASS()
 class CPPTOPDOWN_API ATestActor : public AActor
@@ -24,5 +30,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
+	// Declare "PickedUp" function
+	UFUNCTION(BlueprintCallable)
+	void PickedUp(ACppTopDownCharacter* CharacterPickingUp);
 
 };

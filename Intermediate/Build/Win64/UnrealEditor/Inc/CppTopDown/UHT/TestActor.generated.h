@@ -9,12 +9,17 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class ACppTopDownCharacter;
 #ifdef CPPTOPDOWN_TestActor_generated_h
 #error "TestActor.generated.h already included, missing '#pragma once' in TestActor.h"
 #endif
 #define CPPTOPDOWN_TestActor_generated_h
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execPickedUp);
+
+
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATestActor(); \
 	friend struct Z_Construct_UClass_ATestActor_Statics; \
@@ -23,7 +28,7 @@ public: \
 	DECLARE_SERIALIZER(ATestActor)
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ATestActor(ATestActor&&); \
@@ -35,12 +40,13 @@ public: \
 	NO_API virtual ~ATestActor();
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_9_PROLOG
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_12_GENERATED_BODY \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_15_PROLOG
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_TestActor_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

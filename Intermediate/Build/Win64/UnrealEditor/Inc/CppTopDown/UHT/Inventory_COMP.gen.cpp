@@ -86,7 +86,13 @@ struct Z_Construct_UFunction_UInventory_COMP_AddItemToInventory_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Declare \"Add and Remove Item\" functions\n" },
+#endif
 		{ "ModuleRelativePath", "Inventory_COMP.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Declare \"Add and Remove Item\" functions" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemToBeAdded;
@@ -118,6 +124,58 @@ DEFINE_FUNCTION(UInventory_COMP::execAddItemToInventory)
 	P_NATIVE_END;
 }
 // End Class UInventory_COMP Function AddItemToInventory
+
+// Begin Class UInventory_COMP Function FullInventory
+struct Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics
+{
+	struct Inventory_COMP_eventFullInventory_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Declare \"FullInventory\" function\n" },
+#endif
+		{ "ModuleRelativePath", "Inventory_COMP.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Declare \"FullInventory\" function" },
+#endif
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((Inventory_COMP_eventFullInventory_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Inventory_COMP_eventFullInventory_Parms), &Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInventory_COMP, nullptr, "FullInventory", nullptr, nullptr, Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::Inventory_COMP_eventFullInventory_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::Inventory_COMP_eventFullInventory_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UInventory_COMP_FullInventory()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UInventory_COMP_FullInventory_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UInventory_COMP::execFullInventory)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->FullInventory();
+	P_NATIVE_END;
+}
+// End Class UInventory_COMP Function FullInventory
 
 // Begin Class UInventory_COMP Function RemoveItemFromInventory
 struct Z_Construct_UFunction_UInventory_COMP_RemoveItemFromInventory_Statics
@@ -167,6 +225,7 @@ void UInventory_COMP::StaticRegisterNativesUInventory_COMP()
 	UClass* Class = UInventory_COMP::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AddItemToInventory", &UInventory_COMP::execAddItemToInventory },
+		{ "FullInventory", &UInventory_COMP::execFullInventory },
 		{ "RemoveItemFromInventory", &UInventory_COMP::execRemoveItemFromInventory },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -187,7 +246,13 @@ struct Z_Construct_UClass_UInventory_COMP_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Inventory_MetaData[] = {
 		{ "Category", "Inventory_COMP" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Declare \"Inventory\" array\n" },
+#endif
 		{ "ModuleRelativePath", "Inventory_COMP.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Declare \"Inventory\" array" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnItemAdded_MetaData[] = {
 #if !UE_BUILD_SHIPPING
@@ -209,7 +274,8 @@ struct Z_Construct_UClass_UInventory_COMP_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UInventory_COMP_AddItemToInventory, "AddItemToInventory" }, // 132713752
+		{ &Z_Construct_UFunction_UInventory_COMP_AddItemToInventory, "AddItemToInventory" }, // 3918637139
+		{ &Z_Construct_UFunction_UInventory_COMP_FullInventory, "FullInventory" }, // 617094575
 		{ &Z_Construct_UFunction_UInventory_COMP_RemoveItemFromInventory, "RemoveItemFromInventory" }, // 2236654135
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -269,10 +335,10 @@ UInventory_COMP::~UInventory_COMP() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInventory_COMP, UInventory_COMP::StaticClass, TEXT("UInventory_COMP"), &Z_Registration_Info_UClass_UInventory_COMP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventory_COMP), 3610652404U) },
+		{ Z_Construct_UClass_UInventory_COMP, UInventory_COMP::StaticClass, TEXT("UInventory_COMP"), &Z_Registration_Info_UClass_UInventory_COMP, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventory_COMP), 1183187048U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_1694545966(TEXT("/Script/CppTopDown"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_617224506(TEXT("/Script/CppTopDown"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

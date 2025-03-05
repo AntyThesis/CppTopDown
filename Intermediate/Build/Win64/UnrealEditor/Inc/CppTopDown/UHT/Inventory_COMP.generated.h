@@ -15,20 +15,21 @@ class ATestActor;
 #endif
 #define CPPTOPDOWN_Inventory_COMP_generated_h
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_12_DELEGATE \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_13_DELEGATE \
 CPPTOPDOWN_API void FOnItemAdded_DelegateWrapper(const FMulticastScriptDelegate& OnItemAdded);
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_13_DELEGATE \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_14_DELEGATE \
 CPPTOPDOWN_API void FOnItemRemoved_DelegateWrapper(const FMulticastScriptDelegate& OnItemRemoved);
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execFullInventory); \
 	DECLARE_FUNCTION(execRemoveItemFromInventory); \
 	DECLARE_FUNCTION(execAddItemToInventory);
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInventory_COMP(); \
 	friend struct Z_Construct_UClass_UInventory_COMP_Statics; \
@@ -37,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(UInventory_COMP)
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UInventory_COMP(UInventory_COMP&&); \
@@ -49,13 +50,13 @@ public: \
 	NO_API virtual ~UInventory_COMP();
 
 
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_16_PROLOG
-#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_19_GENERATED_BODY \
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_17_PROLOG
+#define FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_19_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_20_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_Projects_CppTopDown_Source_CppTopDown_Inventory_COMP_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -34,9 +34,12 @@ void UInventory_COMP::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 
 
 
+
+// Define "AddItemFromInventory" function
 void UInventory_COMP::AddItemToInventory(ATestActor* ItemToBeAdded)
 {
-	if (Inventory.Num() < 6)
+
+	if (!FullInventory())
 	{
 		Inventory.Add(ItemToBeAdded);
 		OnItemAdded.Broadcast();
@@ -46,12 +49,31 @@ void UInventory_COMP::AddItemToInventory(ATestActor* ItemToBeAdded)
 
 
 
+
+// Define "RemoveItemFromInventory" function
 void UInventory_COMP::RemoveItemFromInventory(ATestActor* ItemToBeRemoved)
 {
-	if (Inventory.Num() == 0)
+	
+	if (Inventory.Num() != 0)
 	{
 		Inventory.RemoveSingle(ItemToBeRemoved);
 		OnItemRemoved.Broadcast();
 	}
 	else (GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("InventoryEmpty")));
+}
+
+
+
+
+// Define "FullInventory" function
+bool UInventory_COMP::FullInventory() const
+{
+	if (Inventory.Num() >= 6)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
